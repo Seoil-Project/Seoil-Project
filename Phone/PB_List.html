@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="PB_List.css">
+    <script>
+        //json 파일 수정시 항목 추가 가능
+        let XMLHttp = new XMLHttpRequest("PB_List_jsons/personList.json");
+        XMLHttp.open("get", "PB_List_jsons/personList.json");
+        XMLHttp.send();
+        XMLHttp.onreadystatechange = function() {
+            if(XMLHttp.readyState === 4 && XMLHttp.status === 200) return;
+            try {
+                let data = JSON.parse(XMLHttp.responseText);
+                let div = document.getElementById("menu");
+                data.forEach(obj => {
+                    let query = `
+                    <div class="infor">
+                        <a href="${"#"}"><img src="PB_List_images/${obj.image}" alt="${obj.image}" class="profile"></a>
+                        <ul>
+                            <li>${obj.name}</li>
+                            <li>${obj.phone}</li>
+                        </ul>
+                    </div>
+                    <hr>`
+                    div.innerHTML += query;
+                });
+            } catch(e) {}
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <header></header>
+        <main>
+            <h1><b>PHONEBOOK</b></h1>
+            <div id="menu"></div>
+        </main>
+        <footer>
+            <ul>
+                <li><img src="PB_List_images/triangle.png" alt=""></li>
+                <li><img src="PB_List_images/circle.png" alt=""></li>
+                <li><img src="PB_List_images/square.png" alt=""></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
