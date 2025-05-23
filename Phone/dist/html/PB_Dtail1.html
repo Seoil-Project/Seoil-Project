@@ -1,0 +1,17 @@
+<!doctype html><html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Phonebook</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/><script defer="defer" src="../js/PB_Dtail1.js"></script><link href="../css/PB_Dtail1.css" rel="stylesheet"></head><body><div class="container"><header><div class="top-bar"><i class="fas fa-home"></i><div id="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></div></div><div id="menu-box" class="dropdown-menu"><div class="menu-item">수정</div><div class="menu-item">삭제</div></div></header><h1>PHONEBOOK</h1><p class="subtitle">사진</p><div class="profile-pic"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="프로필 이미지"><div class="camera-icon">📷</div></div><div class="info"><label>이름</label><p>Jenny Wilson <i class="fas fa-phone"></i> <i class="fas fa-comment-dots"></i></p><hr><label><span class="icon">📱</span> 전화번호</label><p>(217) 555-0113</p><hr><label>이메일</label><p>JennyWilson@example.com</p><hr></div></div><script>const toggleBtn = document.getElementById("menu-toggle");
+        const menuBox = document.getElementById("menu-box");
+      
+        toggleBtn.addEventListener("click", () => {
+          if (menuBox.style.display === "block") {
+            menuBox.style.display = "none";
+          } else {
+            menuBox.style.display = "block";
+          }
+        });
+      
+        // 메뉴 바깥 클릭 시 닫기
+        document.addEventListener("click", (e) => {
+          if (!toggleBtn.contains(e.target) && !menuBox.contains(e.target)) {
+            menuBox.style.display = "none";
+          }
+        });</script></body></html>
