@@ -30,6 +30,7 @@ body {
   .clock {
     padding: 6px 30px;
   }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -119,7 +120,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 0px;
-    margin: 0px -1px;
+    margin: 0px 0px;
   }
   .navigationbar img {
     width: 20px;
