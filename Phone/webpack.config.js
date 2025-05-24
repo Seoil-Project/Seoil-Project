@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const pages = ['PB_Call', 'PB_Dtail1', 'PB_Edit1', 'PB_List', 'Phone'];
+//추가할 페이지 목록
+const pages = ['PB_Call', 'PB_Dtail1', 'PB_Edit1', 'PB_List', 'Phone', 'PB_Insert'];
 module.exports = {
   //각 페이지 연결
   entry: pages.reduce((config, page) => {
@@ -44,8 +45,8 @@ module.exports = {
     new CopyWebpackPlugin({
     patterns: [
         {
-          from: path.resolve(__dirname, './src/images'),
-          to: 'images'
+          from: path.resolve(__dirname, './src/images'),  //불러올 이미지 경로
+          to: 'images'                                    //웹팩 이미지 저장 경로
         }
       ]
     })

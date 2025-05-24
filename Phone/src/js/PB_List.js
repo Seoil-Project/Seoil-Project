@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     user.forEach(obj => {
         let query = `
         <div class="infor">
-            <a href="${"#"}"><img src="../images/${obj.image}" alt="${obj.image}" class="profile"></a>
+            <a href="./PB_Dtail1.html?id=${obj.id}"><img src="../images/${obj.name}.png" alt="${obj.name}" class="profile"></a>
             <ul>
                 <li>${obj.name}</li>
                 <li>${obj.phone}</li>

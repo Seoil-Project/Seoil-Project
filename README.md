@@ -9,3 +9,9 @@ webpack -> dist디렉토리에 정리
 html 파일에 PB_Insert.html, PB_Insert.css 파일 추가, ← src 파일에서 확인 가능
 images파일에 PB_insert_button.png 이미지 추가, PB_List.html 수정 ← src 파일에서 확인 가능
 ```
+05/24
+```
+PB_Insert 페이지 웹 팩 추가
+JSON 정보 중 이미지 경로 -> id로 변경(이미지는 '(이름).png'로 접근)
+PB_Insert와 PB_Edit 페이지에서 해당하는 프로필 정보 표기
+```
