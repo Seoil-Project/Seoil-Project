@@ -110,7 +110,7 @@ body {
   }
   
   .navigationbar { 
-    margin-top: 11.5%;
+    margin-top: 10%;
     height: 5%;
     background-color: black;
   }
@@ -119,6 +119,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 0px;
+    margin: 0px -1px;
   }
   .navigationbar img {
     width: 20px;
@@ -130,4 +131,4 @@ body {
     border-radius: 20px;
     background-color: rgb(95, 95, 94);
     transition: 0.3s;
-  }
+}
