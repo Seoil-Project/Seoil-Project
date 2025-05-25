@@ -1,5 +1,6 @@
 import '../css/PB_Dtail1.css';
 import users from '../jsons/personList.json';
+import './Clock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById("menu-toggle");

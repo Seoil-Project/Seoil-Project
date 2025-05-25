@@ -1,5 +1,6 @@
 import '../css/PB_List.css';
 import user from '../jsons/personList.json';
+import './Clock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     let div = document.getElementById("menu");

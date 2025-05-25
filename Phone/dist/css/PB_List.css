@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 #main {
     width: 400px;
@@ -35,10 +36,12 @@ hr {
     margin-bottom: 20px;
 }
 h1 {
-    font-size: 40px;
+    font-size: 39px;
     margin-bottom: 20px;
 }
 header {
+    padding: 6px 30px;
+    color: white;
     background-color: black;
     height: 5%;
 }
@@ -57,6 +60,20 @@ footer img {
 footer ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    padding-top: 10px;
+    margin: 0 -1px;
 }
+footer li {
+    padding: 10px 30px;
+}
+footer li:hover{
+    border-radius: 20px;
+    background-color: rgb(95, 95, 94);
+    transition: 0.3s;
+}
+
+
+
+
+

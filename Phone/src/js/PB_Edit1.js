@@ -1,5 +1,6 @@
 import '../css/PB_Edit1.css';
 import users from '../jsons/personList.json';
+import './Clock.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     let id = location.href.split('?')[1].split('=')[1];

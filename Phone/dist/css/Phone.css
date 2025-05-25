@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{ /* 화면 가운데로 이동 */
     display: flex;
@@ -20,6 +21,8 @@ body{ /* 화면 가운데로 이동 */
 }
 
 header {
+    padding: 6px 30px;
+    color: white;
     height: 5%;
     background-color: black;
 }
@@ -53,7 +56,18 @@ footer {
     height: 5%;
     background-color: black;
 }
-
+footer ul {
+    padding-top: 0px;
+}
 footer img {
     width: 20px;
 }
+footer li {
+    padding: 10px 30px;
+}
+footer li:hover{
+    border-radius: 20px;
+    background-color: rgb(95, 95, 94);
+    transition: 0.3s;
+}
+
