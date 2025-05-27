@@ -27,4 +27,5 @@ Clock.js와 Timer.js 웹팩 적용
 src/images 경로에 gallery 추가(각 이미지 분류 및 추가는 하위 디렉토리에서 가능)
 Album.html 화면 구현 및 선택한 메뉴에 따라 이미지 로드(완료 버튼은 아직 구현X)
 Album.html과 Album.css 웹팩 적용
+PB_Insert_css에서 navigation(margin-top) 부분 수정
 ```
