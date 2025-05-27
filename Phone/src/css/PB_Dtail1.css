@@ -1,9 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
   }
-  
+  main {
+    box-sizing: border-box;
+    height: 90%;
+    overflow: auto;
+  }
   a {
     color: inherit;      
     text-decoration: none;
@@ -124,7 +130,6 @@ body {
   }
 
   .navigationbar { 
-    margin-top: 10%;
     height: 5%;
     background-color: black;
   }

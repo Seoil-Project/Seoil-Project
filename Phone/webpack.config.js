@@ -4,7 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //추가할 페이지 목록
-const pages = ['PB_Call', 'PB_Dtail1', 'PB_Edit1', 'PB_List', 'Phone', 'PB_Insert'];
+const pages = ['PB_Call', 'PB_Dtail1', 'PB_Edit1', 'PB_List', 'Phone', 'PB_Insert', 'Album'];
+const imagesPath = ['Download', 'KakaoTalk', 'Naver', 'DCIM'];
+const imageCopyPatterns = imagesPath.map((category) => ({
+  from: `src/images/gallery/${category}`,
+  to: `images/gallery/${category}`,
+}));
 module.exports = {
   //각 페이지 연결
   entry: pages.reduce((config, page) => {
@@ -43,11 +48,15 @@ module.exports = {
       filename: 'css/[name].css', // dist에 나올 CSS 파일 이름
     }),
     new CopyWebpackPlugin({
-    patterns: [
+      patterns: [
         {
-          from: path.resolve(__dirname, './src/images'),  //불러올 이미지 경로
-          to: 'images'                                    //웹팩 이미지 저장 경로
-        }
+          from: 'src/images',
+          to: 'images',
+          globOptions: {
+            ignore: ['**/gallery/**', '**/gallery/**/*'] // gallery 하위 폴더 무시
+          }
+        },
+        ...imageCopyPatterns
       ]
     })
   ],

@@ -20,5 +20,11 @@ PB_Insert와 PB_Edit 페이지에서 해당하는 프로필 정보 표기
 src 파일에 있는 모든 HTML, CSS 수정(디자인 부분만)
 src 파일에서 js 폴더에 Clock.js, Timer.js 추가
 (Clock은 모든 HTML에서 사용되고, Timer는 PB_Call.html에서 사용됨)
-Clock.js와 Timer.js 웹팩적용
+Clock.js와 Timer.js 웹팩 적용
+```
+05/27
+```
+src/images 경로에 gallery 추가(각 이미지 분류 및 추가는 하위 디렉토리에서 가능)
+Album.html 화면 구현 및 선택한 메뉴에 따라 이미지 로드(완료 버튼은 아직 구현X)
+Album.html과 Album.css 웹팩 적용
 ```

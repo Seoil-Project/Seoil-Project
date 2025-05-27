@@ -1,6 +1,8 @@
-body {
+* {
     margin: 0;
     padding: 0;
+}
+body {
     font-family: sans-serif;
     box-sizing: border-box;
   }
@@ -31,12 +33,15 @@ body {
   }
 
   .header {
-    height: 5%;
     display: flex;
     justify-content: space-between;
     padding: 20px;
   }
-  
+  main {
+    box-sizing: border-box;
+    height: 90%;
+    overflow: auto;
+  }
   .back-btn {
     font-size: 24px;
     cursor: pointer;
@@ -93,9 +98,12 @@ body {
     display: block;
     margin-top: 20px;
   }
-  
-  .info p {
-    margin: 5px 0;
+    .info input {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
   }
   
   .icon {
@@ -103,7 +111,6 @@ body {
   }
 
   footer { 
-    margin-top: 9.6%;
     height: 5%;
     background-color: black;
   }

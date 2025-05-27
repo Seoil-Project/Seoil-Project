@@ -22,11 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //id에 맞는 정보로 json 참조하여 변경
-    let id = location.href.split('?')[1].split('=')[1];
+    let url = location.href.split('?');
+    if(url.length <= 1) return;
+    let id = url[1].split('=')[1];
     
     //id값 그대로 PB_Edit에 전달
     let m = menuBox.getElementsByClassName("menu-item")[0].querySelector("a").href = `./PB_Edit1.html?id=${id}`;
-    console.log(m);
     //delte 구현 시 수정
     //menuBox.getElementsByClassName("menu-item")[1].querySelector("a").href = `./PB_Edit1.html?id=${id}`;
     
