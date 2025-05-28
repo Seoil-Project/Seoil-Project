@@ -22,16 +22,13 @@ body {
     overflow: hidden;
   }
   #images {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
   }
   #images img {
-    width: calc(388px/3);
-    height: calc(388px/3);
-    margin: 0px 0px;
-    padding: 1px 1px;
+    display: block;
+    width: 124px;
+    height: 124px;
     background-color: lightgray;
   }
   header{
@@ -53,7 +50,7 @@ body {
   main {
     box-sizing: border-box;
     height: 90%;
-    overflow: auto;
+    overflow-y: scroll;
   }
 
   h1 {

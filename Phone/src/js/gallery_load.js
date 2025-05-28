@@ -11,9 +11,6 @@ export function load(num) {
     div.innerHTML = "";
     let profile = document.createElement("img");
     profile.src = "../images/photo_profile.png";
-    profile.style.width = "80px";
-    profile.style.height = "80px";
-    profile.style.padding = "25px 25px";
     div.appendChild(profile);
     //모든 이미지 로드
     if(num == 0) {
