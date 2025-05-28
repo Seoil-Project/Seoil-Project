@@ -2,7 +2,7 @@
 import users from '../jsons/personList.json';
 
 //항목 추가(id는 마지막 값+1)
-users.push({id:10, name:"dawd", phone:"010-2342-5325"});
+users.push({id:parseInt(`${users[users.length-1].id+1}`), name:"dawd", phone:"010-2342-5325"});
 
 let id = 1;
 //특정 id의 user 정보 가져오기
