@@ -29,3 +29,12 @@ Album.html 화면 구현 및 선택한 메뉴에 따라 이미지 로드(완료 
 Album.html과 Album.css 웹팩 적용
 PB_Insert_css에서 navigation(margin-top) 부분 수정(src, dist 둘다 수정)
 ```
+05/28
+```
+'(유저 이름).png'로 접근 => '이미지 파일명'으로 접근
+json 목록에 이미지 파일명에 해당하는 image속성 추가
+PB_Insert.html과 PB_edit.html 페이지의 Album에서 사진 가져오기 및 적용
+연락처 추가
+> 앨벌에서 이미지 선택 시 -> 선택한 이미지
+> 선택 안할 시 -> 기본 이미지
+```
