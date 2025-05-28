@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // localStorage에서 사용자 리스트 가져오기
     const userList = JSON.parse(localStorage.getItem("userList"));
+    console.log(userList);
 
     let div = document.getElementById("menu");
 
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let query = `
         <div class="infor">
             <a href="./PB_Dtail1.html?id=${obj.id}">
-                <img src="../images/${obj.name}.png" alt="${obj.name}" class="profile">
+                <img src="../images/${obj.image}" alt="${obj.name}" class="profile">
             </a>
             <ul>
                 <li>${obj.name}</li>

@@ -1,7 +1,6 @@
 import '../css/Album.css';
 import './Clock.js';
 import './gallery_load.js';
-import { load } from './gallery_load.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById("menu-toggle");

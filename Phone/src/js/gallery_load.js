@@ -20,7 +20,7 @@ export function load(num) {
                 let img = document.createElement("img");
                 img.src = images(fileName);
                 img.addEventListener("click", () => {
-                    localStorage.setItem("selectedImage", images(fileName));    //이미지 경로 임시 저장
+                    localStorage.setItem("selectedImage", fileName.substring(2));    //이미지 경로 임시 저장
                     history.back();
                 });
                 div.appendChild(img);

@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailInput = document.getElementById("email");
   const addButton = document.querySelector(".title a");
 
+  // 이미지 경로 불러오기 (앨범에서 선택한 경우)
+  const selectedImage = localStorage.getItem("selectedImage");
+  if(selectedImage) {
+    const profile = document.getElementsByClassName("profile-pic")[0];
+    if(!profile) return;
+    profile.querySelector("img").src = `../images/${selectedImage}`;
+  }
+
   addButton.addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -33,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         emailInput.focus();
         return;
       }
-      
 
     const userList = JSON.parse(localStorage.getItem("userList")) || [];
 
@@ -43,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: newId,
       name,
       phone,
-      email
+      email,
+      image: `../images/${(selectedImage) ? selectedImage : `default_profile.png`}`
     };
 
     userList.push(newUser);
@@ -53,4 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("새 사용자가 추가되었습니다.");
     window.location.href = "PB_List.html";
   });
+  localStorage.removeItem("selectedImage");
 });

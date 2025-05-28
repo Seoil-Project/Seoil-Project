@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 프로필 이미지 및 정보 표시
     const profile = document.querySelector(".profile-pic img");
-    profile.src = `../images/${user.name}.png`;
-
+    profile.src = `../images/${user.image}`;
+    
     const infoTexts = document.querySelectorAll(".info p");
     const email = `${user.name.replace(/\s+/g, "")}@example.com`;
 
