@@ -2,7 +2,6 @@ import '../css/PB_Call.css';
 import './Clock.js';
 import './Timer.js';
 
-
 document.addEventListener("DOMContentLoaded", () => {
     // URL에서 id 추출
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,7 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 이미지 출력
     const imgElement = document.querySelector("nav img");
-    if (imgElement) imgElement.src = `../images/${user.name}.png`;
+    if (imgElement) {
+        //로딩중
+        imgElement.classList.add("loading");
+        const img = new Image();
+        img.src = `../images/${user.image}`;
+        //전부 로드되면 표시
+        img.onload = () => {
+            imgElement.src = `../images/${user.image}`;
+            imgElement.classList.remove("loading");
+        };
+    }
 
     // 종료 버튼 클릭 → 상세페이지 이동
     const endButton = document.querySelector("main > img[alt='통화종료']");

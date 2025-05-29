@@ -9,21 +9,28 @@ const dir = ["Download", "KakaoTalk", "Naver", "DCIM"];
 export function load(num) {
     const div = document.getElementById("images");
     div.innerHTML = "";
+    let a = document.createElement("a");
     let profile = document.createElement("img");
     profile.src = "../images/photo_profile.png";
-    div.appendChild(profile);
+    profile.style.boxSizing = "border-box";
+    profile.style.padding = "20px 20px";
+    a.appendChild(profile);
+    div.appendChild(a);
     //모든 이미지 로드
     if(num == 0) {
         let count = 0;
         galleries.forEach((images) => {
             images.keys().forEach((fileName) => {
+                let a = document.createElement("a");
                 let img = document.createElement("img");
+                a.href = "javascript:void(0)";
                 img.src = images(fileName);
                 img.addEventListener("click", () => {
                     localStorage.setItem("selectedImage", fileName.substring(2));    //이미지 경로 임시 저장
                     history.back();
                 });
-                div.appendChild(img);
+                a.appendChild(img);
+                div.appendChild(a);
                 count++;
             });
         });
@@ -33,9 +40,12 @@ export function load(num) {
     else {
         let count = 0;
         galleries[num-1].keys().forEach((fileName) => {
+            let a = document.createElement("a");
             let img = document.createElement("img");
+            a.href = "javascript:void(0)";
             img.src = galleries[num-1](fileName);
-            div.appendChild(img);
+            a.appendChild(img);
+            div.appendChild(a);
             count++;
         });
         document.getElementById("menu-toggle").querySelector("span").textContent = `${dir[num-1]} ${count}`;

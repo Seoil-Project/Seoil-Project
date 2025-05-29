@@ -42,3 +42,12 @@ PB_Insert.html과 PB_edit.html 페이지의 Album에서 사진 가져오기 및 
 ```
 전체적인 디자인 수정
 ```
+05/30
+```
+json과 local storage 이메일 정보 추가
+json의 이미지 파일명과 이메일은 PB_List에서 초기 설정하도록 변경
+Album 디자인 수정 및 PB_Datil dropdown-menu 수정
+Album과 PB_List 스크롤바 제거(휠 버튼으로 화면 내리기)
+코드 리펙토링 및 UI 최적화(preload)
+전체 기능 테스트 및 오류 수정
+```

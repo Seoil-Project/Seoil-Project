@@ -106,20 +106,24 @@ header {
   right: 0;
   background-color: #6FC0A6;
   border-radius: 10px;
-  padding: 10px 0;
-  width: 120px;
+  box-sizing: border-box;
   display: none; /* 처음엔 숨김 */
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 .menu-item {
-  padding: 10px;
+  padding: 10px 10px;
   font-size: 18px;
   color: #000;
   cursor: pointer;
   text-align: center;
   font-weight: bold;
+  overflow: hidden;
+}
+.menu-item:hover {
+  background-color: #67b199;
 }
 
 .title {

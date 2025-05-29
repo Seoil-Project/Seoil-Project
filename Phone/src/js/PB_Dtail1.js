@@ -31,16 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("해당 ID의 사용자를 찾을 수 없습니다.");
         return;
     }
+    console.log(userList);
 
     // 프로필 이미지
     const profile = document.querySelector(".profile-pic img");
     profile.src = `../images/${user.image}`;
 
     // 텍스트 정보
-    const email = `${user.name.replace(/\s+/g, "")}@example.com`;
     document.querySelector(".user-name p").textContent = user.name;
     document.querySelector(".user-hp p").textContent = user.phone;
-    document.querySelector(".profile-email p").textContent = email;
+    document.querySelector(".profile-email p").textContent = user.email;
 
     // 메뉴 링크 설정
     const editLink = menuBox.querySelector('a[data-type="edit"]');

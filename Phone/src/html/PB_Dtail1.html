@@ -6,8 +6,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>PB_Dtail1</title>
   <link rel="stylesheet" href="../css/PB_Dtail1.css" />
-  <script src="../js/Clock.js" defer></script>
-  <script src="../js/PB_DetailLogic.js" defer></script> <!-- JS 분리 가정 -->
+  <!-- 웹팩으로 자동 로드됨 -->
+  <!-- <script src="../js/Clock.js" defer></script> -->
+  <!-- <script src="../js/PB_DetailLogic.js" defer></script> -->
 </head>
 
 <body>
@@ -36,15 +37,15 @@
                     <a href="#"><i class="material-icons">dehaze</i></a>
                 </span>
                 <div class="dropdown-menu" id="dropdown-menu">
-                    <a href="#" data-type="edit" class="menu-item">Edit</a>
-                    <a href="#" data-type="delete" class="menu-item">Delete</a>
+                    <div class="menu-item"><a href="#" data-type="edit" class="menu-item">Edit</a></div>
+                    <div class="menu-item"><a href="#" data-type="delete" class="menu-item">Delete</a></div>
                 </div>
             </div>
         </div>
 
         <div class="profile">
             <div class="profile-pic">
-                <img src="../images/default_profile.png" alt="profile">
+                <img src="../images/default_profile.png">
             </div>
             <div class="profile-info">
                 <div class="user-info">

@@ -16,13 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 이미지 경로 불러오기 (앨범에서 선택한 경우)
   const selectedImage = localStorage.getItem("selectedImage");
-  if(selectedImage) {
-    const profile = document.getElementsByClassName("profile-pic")[0];
-    if(!profile) return;
-    profile.querySelector("img").src = `../images/${selectedImage}`;
-  }
-  else document.querySelector(".profile-pic img").src = `../images/${user.image}`;
+  const profile = document.querySelector(".profile-pic img");
+  profile.classList.add("loading");
 
+  const img = new Image();
+  img.src = `../images/${selectedImage ? selectedImage : user.image}`;
+  //전부 로드되면 표시
+  img.onload = () => {
+      profile.src = img.src;
+      profile.classList.remove("loading");
+  };
   // input 요소에 사용자 정보 삽입
   const nameInput = document.getElementById("name");
   const phoneInput = document.getElementById("hp");
@@ -30,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (nameInput) nameInput.value = user.name;
   if (phoneInput) phoneInput.value = user.phone;
-  if (emailInput) emailInput.value = `${user.name.replace(/\s+/g, "")}@example.com`;
+  if (emailInput) emailInput.value = user.email;
 
   // 완료 버튼 클릭 시 localStorage에 저장
   const doneButton = document.querySelector(".add-btn a");
@@ -47,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         id: user.id,
         name: nameInput.value,
         phone: phoneInput.value,
+        email: emailInput.value,
         image: ((selectedImage) ? selectedImage : user.image)
       };
 

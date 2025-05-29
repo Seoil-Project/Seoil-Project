@@ -108,6 +108,11 @@ header {
 .profile-pic img {
   width: 100%;
   height: 100%;
+  transition: opacity 0.2s ease;    /* 페이드 인 효과 */
+  opacity: 1;
+}
+.profile-pic img.loading {
+  opacity: 0;
 }
 
 /* 오버레이 */

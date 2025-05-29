@@ -1,9 +1,9 @@
 [
-    {"id":1, "name":"Jenny Wilson", "phone":"(217) 555-0113", "image":"Jenny Wilson.png"},
-    {"id":2, "name":"Courtney Henry", "phone":"(207) 555-0119", "image":"Courtney Henry.png"},
-    {"id":3, "name":"Kathryn Murphy", "phone":"(308) 555-0121", "image":"Kathryn Murphy.png"},
-    {"id":4, "name":"Jane Cooper", "phone":"(252) 555-0126", "image":"Jane Cooper.png"},
-    {"id":5, "name":"Dianne Russell", "phone":"(684) 555-0102", "image":"Dianne Russell.png"},
-    {"id":6, "name":"Jerome Bell", "phone":"(209) 555-0104", "image":"Jerome Bell.png"}
+    {"id":1, "name":"Jenny Wilson", "phone":"(217) 555-0113"},
+    {"id":2, "name":"Courtney Henry", "phone":"(207) 555-0119"},
+    {"id":3, "name":"Kathryn Murphy", "phone":"(308) 555-0121"},
+    {"id":4, "name":"Jane Cooper", "phone":"(252) 555-0126"},
+    {"id":5, "name":"Dianne Russell", "phone":"(684) 555-0102"},
+    {"id":6, "name":"Jerome Bell", "phone":"(209) 555-0104"}
     
 ]
