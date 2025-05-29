@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nameInput = document.getElementById("name");
   const phoneInput = document.getElementById("hp");
   const emailInput = document.getElementById("email");
-  const addButton = document.querySelector(".title a");
+  const addButton = document.querySelector(".add-btn span");
 
   // 이미지 경로 불러오기 (앨범에서 선택한 경우)
   const selectedImage = localStorage.getItem("selectedImage");
