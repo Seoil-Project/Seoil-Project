@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // input 요소에 사용자 정보 삽입
   const nameInput = document.getElementById("name");
-  const phoneInput = document.getElementById("phone");
+  const phoneInput = document.getElementById("hp");
   const emailInput = document.getElementById("email");
 
   if (nameInput) nameInput.value = user.name;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (emailInput) emailInput.value = `${user.name.replace(/\s+/g, "")}@example.com`;
 
   // 완료 버튼 클릭 시 localStorage에 저장
-  const doneButton = document.querySelector(".title a");
+  const doneButton = document.querySelector(".add-btn a");
   if (doneButton) {
     doneButton.addEventListener("click", (e) => {
       e.preventDefault();
