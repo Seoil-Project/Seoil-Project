@@ -17,13 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     userList.forEach(obj => {
         let query = `
         <div class="infor">
-            <a href="./PB_Dtail1.html?id=${obj.id}">
-                <img src="../images/${obj.image}" alt="${obj.name}" class="profile">
-            </a>
-            <ul>
-                <li>${obj.name}</li>
-                <li>${obj.phone}</li>
-            </ul>
+            <div>
+                <a href="./PB_Dtail1.html?id=${obj.id}">
+                    <img src="../images/${obj.image}" alt="${obj.name}" class="profile">
+                </a>
+            </div>
+            <div>
+                <span>${obj.name}</span>
+            </div>
         </div>
         <hr>`;
         div.innerHTML += query;

@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>PB_Dtail1</title>
-  <link rel="stylesheet"/>
-  <!-- 웹팩으로 자동 로드됨 -->
-   <link rel="stylesheet" href="../css/PB_Dtail1.css"/>
-  <script src="../js/Clock.js"></script>
+  <link rel="stylesheet" href="../css/PB_Dtail1.css" />
+  <script src="../js/Clock.js" defer></script>
+  <script src="../js/PB_DetailLogic.js" defer></script> <!-- JS 분리 가정 -->
 </head>
 
 <body>
 <div class="phone">
     <header class="top-bar">
         <div>
-            <div class="clock">
-                00:00
-            </div>
+            <div class="clock">00:00</div>
         </div>
         <div class="camera">
             <i class="material-icons">album</i>
@@ -28,6 +25,7 @@
             <i class="material-icons" id="battery">battery_full</i>
         </div>
     </header>
+
     <main>
         <div class="nav">
             <div class="back-btn">
@@ -38,26 +36,23 @@
                     <a href="#"><i class="material-icons">dehaze</i></a>
                 </span>
                 <div class="dropdown-menu" id="dropdown-menu">
-                    <div class="menu-item">Edit</div>
-                    <div class="menu-item">Delete</div>
+                    <a href="#" data-type="edit" class="menu-item">Edit</a>
+                    <a href="#" data-type="delete" class="menu-item">Delete</a>
                 </div>
             </div>
         </div>
+
         <div class="profile">
             <div class="profile-pic">
-                <img src="../images/default_profile.png">
+                <img src="../images/default_profile.png" alt="profile">
             </div>
             <div class="profile-info">
                 <div class="user-info">
-                    <div class="user-name">
-                        <p>JennyWilson</p>
-                    </div>
-                    <div class="user-hp">
-                        <p>(217) 555-0113</p>
-                    </div>
+                    <div class="user-name"><p>이름</p></div>
+                    <div class="user-hp"><p>전화번호</p></div>
                 </div>
                 <div class="actions">
-                    <div class="action-item"><i class="material-icons">call</i></div>
+                    <div class="action-item" id="call-button"><i class="material-icons">call</i></div>
                     <div class="action-item"><i class="material-icons">message</i></div>
                     <div class="action-item"><i class="material-icons">voice_chat</i></div>
                     <div class="action-item"><i class="material-icons">star</i></div>
@@ -68,13 +63,12 @@
                     <div class="etc-title">
                         <p>E-mail</p><i class="material-icons">email</i>
                     </div>
-                    <div class="profile-email">
-                        <p>JennyWilson@gmail.com</p>
-                    </div>
+                    <div class="profile-email"><p>이메일</p></div>
                 </div>
             </div>
         </div>
     </main>
+
     <footer>
         <ul>
             <li><img src="../images/square.png" alt=""></li>
@@ -84,20 +78,4 @@
     </footer>
 </div>
 </body>
-<script>
-    const toggleBtn = document.getElementById("menu-toggle");
-    const menuBox = document.getElementById("dropdown-menu");
-
-    toggleBtn.addEventListener("click", () => {
-        const isVisible = menuBox.style.display === "block";
-        menuBox.style.display = isVisible ? "none" : "block";
-    });
-
-    // 바깥 클릭 시 닫히게 (선택 사항)
-    window.addEventListener("click", (e) => {
-        if (!toggleBtn.contains(e.target) && !menuBox.contains(e.target)) {
-            menuBox.style.display = "none";
-        }
-    });
-</script>
 </html>

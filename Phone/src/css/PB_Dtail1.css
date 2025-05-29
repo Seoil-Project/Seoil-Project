@@ -122,10 +122,6 @@ header {
   font-weight: bold;
 }
 
-.menu-item:hover {
-  background-color: #f0f0f0;
-}
-
 .title {
   font-size: 20px;
   font-weight: bold;
