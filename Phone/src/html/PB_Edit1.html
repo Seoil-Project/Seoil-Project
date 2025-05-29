@@ -3,46 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>PB_Edit1</title>
   <!-- 웹팩으로 자동 로드됨 -->
-  <!-- <link rel="stylesheet" href="../css/PB_Edit1.css"> -->
+   <link rel="stylesheet" href="../css/PB_Edit1.css">
+  <script src="../js/Clock.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="clock">로딩중</div>
-    </header>
-    <main>
-      <div class="header">
-        <span class="back-btn"><a href="javascript:void(0)" onclick="history.back()">&#8592;</a></span>
-        <span class="title"><a href="#">완료</a></span>
+<div class="phone">
+  <header class="top-bar">
+    <div>
+      <div class="clock">
+        00:00
       </div>
-
-      <h1>PHONEBOOK</h1>
-      <p class="subtitle">사진</p>
-      <div class="profile-pic">
-        <img src="">
-        <div class="camera-icon"><a href="./Album.html">📷</a></div>
+    </div>
+    <div class="camera">
+      <i class="material-icons">album</i>
+    </div>
+    <div class="icon">
+      <i class="material-icons">network_cell</i>
+      <i class="material-icons">network_wifi</i>
+      <i class="material-icons" id="battery">battery_full</i>
+    </div>
+  </header>
+  <main>
+    <div class="nav">
+      <div class="back-btn">
+        <span><a href="./PB_List.html"><i class="material-icons">keyboard_backspace</i></a></span>
       </div>
-
-      <div class="info">
-        <label>이름</label><br>
-        <input type="text" name="name" id="name" placeholder="이름"><br><br>
-
-        <label><span class="icon">📱</span> 전화번호</label><br>
-        <input type="text" name="phone" id="phone" placeholder="비밀번호"><br><br>
-
-        <label>이메일</label><br>
-        <input type="text" name="email" id="email" placeholder="이메일"><br><br>
+      <div class="title">
+        PHONEBOOK EDIT
       </div>
-    </main>
-    <footer> <!-- 네비게이션바 부분 -->
-            <ul>
-                <li><img src="../images/triangle.png" alt=""></li>
-                <li><img src="../images/circle.png" alt=""></li>
-                <li><img src="../images/square.png" alt=""></li>
-            </ul>
-    </footer>
-  </div>
+      <div class="add-btn">
+        <span><a href="#"><i class="material-icons">check</i></a></span>
+      </div>
+    </div>
+    <div class="profile-pic">
+      <img src="../images/Jenny Wilson1.png">
+      <div class="overlay">
+        <span class="plus">+</span>
+      </div>
+    </div>
+    <div class="info">
+      <div class="info_name">
+        <label for="name">NAME</label>
+        <input type="text" id="name" value="Jenny Wilson">
+      </div>
+      <div class="info_hp">
+        <label for="hp">H.P</label>
+        <input type="text" id="hp" value="(217) 555-0113">
+      </div>
+      <div class="info_emain">
+        <label for="email">EMAIL</label>
+        <input type="text" id="email" value="JennyWilson@gmail.com">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><img src="../images/triangle.png" alt=""></li>
+      <li><img src="../images/circle.png" alt=""></li>
+      <li><img src="../images/square.png" alt=""></li>
+    </ul>
+  </footer>
+</div>
 </body>
 </html>

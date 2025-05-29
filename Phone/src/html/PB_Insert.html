@@ -3,46 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>PB_Insert</title>
     <!-- 웹팩으로 자동 로드됨 -->
-    <!-- <link rel="stylesheet" href="../css/PB_Insert.css"> -->
+    <link rel="stylesheet" href="../css/PB_Insert.css">
 </head>
 <body>
-    <div class="container">
-      <header>
-          <div class="clock">로딩중</div>
-      </header>
-        <div class="header">
-          <span class="back-btn"><a href="./PB_List.html">&#8592;</a></span>
-          <span class="title"><a href="#">추가</a></span>
-        </div>
-
-        <h1>PHONEBOOK</h1>
-        <p class="subtitle">사진</p>
-        <nav class="profile-pic">
-          <img src="../images/default_profile.png">
-          <div class="camera-icon"><a href="./Album.html">📷</a></div>
-        </nav>
-
-        <main class="info">
-          <label>이름</label><br>
-          <input type="text" name="name" id="name" placeholder="이름을 입력해주세요"><br><br>
-          
-    
-          <label><span class="icon">📱</span> 전화번호</label><br>
-          <input type="text" name="hp" id="hp" placeholder="전화번호를 입력해주세요"><br><br>
-
-          <label>이메일</label><br>
-          <input type="email" name="email" id="email" placeholder="이메일을 입력해주세요">
+    <div class="phone">
+        <header class="top-bar">
+            <div>
+                <div class="clock">
+                    00:00
+                </div>
+            </div>
+            <div class="camera">
+                <i class="material-icons">album</i>
+            </div>
+            <div class="icon">
+                <i class="material-icons">network_cell</i>
+                <i class="material-icons">network_wifi</i>
+                <i class="material-icons" id="battery">battery_full</i>
+            </div>
+        </header>
+        <main>
+            <div class="nav">
+                <div class="back-btn">
+                    <span><a href="./PB_List.html"><i class="material-icons">keyboard_backspace</i></a></span>
+                </div>
+                <div class="title">
+                    PHONEBOOK ADD
+                </div>
+                <div class="add-btn">
+                    <span><a href="#"><i class="material-icons">check</i></a></span>
+                </div>
+            </div>
+            <div class="profile-pic">
+                <img src="../images/default_profile.png">
+                <div class="overlay">
+                    <span class="plus">+</span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info_name">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" placeholder="Add Name">
+                </div>
+                <div class="info_hp">
+                    <label for="hp">H.P</label>
+                    <input type="text" id="hp" placeholder="Add Hp">
+                </div>
+                <div class="info_emain">
+                    <label for="email">EMAIL</label>
+                    <input type="text" id="email" placeholder="Add Email">
+                </div>
+            </div>
         </main>
-
-        <footer class="navigationbar">
-          <ul>
-            <li><img src="../images/triangle.png" alt=""></li>
-            <li><img src="../images/circle.png" alt=""></li>
-            <li><img src="../images/square.png" alt=""></li>
-          </ul>
+        <footer>
+            <ul>
+                <li><img src="../images/square.png" alt=""></li>
+                <li><img src="../images/circle.png" alt=""></li>
+                <li><img src="../images/triangle.png" alt=""></li>
+            </ul>
         </footer>
-     </div>
+    </div>
 </body>
 </html>

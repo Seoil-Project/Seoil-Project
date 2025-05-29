@@ -1,154 +1,274 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body {
-    box-sizing: border-box;
-  }
-  main {
-    box-sizing: border-box;
-    height: 90%;
-    overflow: auto;
-  }
-  a {
-    color: inherit;      
-    text-decoration: none;
-  }
-  .container {
-    border: 3px solid black;
-    width: 400px;
-    height: 850px;
-    margin: auto;
-    background: white;
-    border-radius: 50px;
-    box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
-  }
-  header{
-    color: white;
-    background-color: black;
-    height: 5%;
-  }
-  .clock {
-    padding: 6px 30px;
-  }
-
-  nav {
-    padding: 20px;
-  }
-  .top-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-  }
-
-  h1 {
-    text-align: center;
-    font-weight: bold;
-  }
-  .subtitle {
-    font-size: 25px;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .profile-pic {
-    position: relative;
-    width: 130px;
-    height: 130px;
-    margin: 0 auto;
-  }
-  .profile-pic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 3px solid #444;
-    object-fit: cover;
-  }
-  .camera-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: white;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 20px;
-    border: 1px solid #aaa;
-  }
-  
-  .info {
-    text-align: left;
-    margin-top: 70px;
-    padding: 0 30px;
-  }
-  .name{
-    display: flex;
-    justify-content: space-between;
-  }
-  .info label {
-    font-weight: bold;
-    display: block;
-    margin-top: 20px;
-  }
-  
-  .info p {
-    margin: 5px 0;
-  }
-  .info i {
-    font-size: 34px;
-  }
-  .icon {
-    margin-right: 5px;
-  }
-  
-  .menu-icon {
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px; /* header 아래로 위치 */
-    right: 30px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
-  }
-  
-  .menu-item {
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .menu-item:hover {
-    background-color: #f5f5f5;
-  }
-
-  .navigationbar { 
-    height: 5%;
-    background-color: black;
-  }
-  .navigationbar ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0px;
-    margin: 0px;
-  }
-  .navigationbar img {
-    width: 20px;
-  }
-  .navigationbar li {
-    padding: 10px 30px;
-  }
-  .navigationbar li:hover{
-    border-radius: 20px;
-    background-color: rgb(95, 95, 94);
-    transition: 0.3s;
+a{
+  text-decoration: none;
+  color: #6FC0A6;
 }
 
+body{ /* 화면 가운데로 이동 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 753px;
+  text-align: center;
+}
+
+.phone {
+  width: 400px;
+  height: 850px;
+  border-radius: 50px;
+  border: 10px solid black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #111416;
+  color: #6FC0A6;
+}
+
+header {
+  color: white;
+  background-color: black;
+  position: relative;
+}
+
+.top-bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.camera > i{
+  font-size: 20px;
+}
+
+
+.clock {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  padding-left: 20px;
+}
+
+.icon{
+  padding-right: 20px;
+}
+
+.icon > i{
+  font-size: 15px;
+}
+
+#battery{
+  transform: rotate(90deg)
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-btn {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-btn{
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #6FC0A6;
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 120px;
+  display: none; /* 처음엔 숨김 */
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.menu-item {
+  padding: 10px;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  background-color: #f0f0f0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile{
+  height: 800px;
+  display: block;
+  overflow: hidden;
+}
+
+.profile-pic{
+  width: 380px;
+  height: 200px;
+}
+
+.profile-pic img {
+  margin-top: 50px;
+  width: 120px;
+  height: 120px;
+  border-radius: 70px;
+}
+
+.profile-info {
+  background-color: #6FC0A6;
+  height: 100%;
+  margin-top: 35px;
+  border-radius: 30px;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info{
+  text-align: left;
+  float: left;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+
+.user-name{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.user-hp{
+  font-size: 20px;
+}
+
+.actions{
+  margin-top: 30px;
+  margin-left: 10px;
+  border-radius: 30px;
+  width: 95%;
+  height: 30%;
+  background-color: #d0e6d7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.action-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #162F33;
+  border-bottom: 1px solid #162F33;
+  box-sizing: border-box;
+}
+
+.action-item:nth-child(3),
+.action-item:nth-child(6) {
+  border-right: none;
+}
+
+.action-item:nth-child(n+4) {
+  border-bottom: none;
+}
+
+.action-item > i{
+  font-size: 30px;
+}
+
+.action-item > i:hover{
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #afccb8;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.user-etc{
+  margin-top: 20px;
+  margin-left: 10px;
+  border-radius: 30px;
+  width: 95%;
+  height: 30%;
+  background-color: #d0e6d7;
+}
+
+.etc-title, .profile-email{
+  color: #000000;
+}
+
+.etc-title{
+  display: flex;
+  padding-left: 30px;
+  padding-top: 20px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.etc-title > i{
+  padding-left: 5px;
+  font-size: 18px;
+}
+
+.profile-email{
+  padding-top: 2px;
+  padding-left: 30px;
+  text-align: left;
+  font-size: 18px;
+}
+
+footer {
+  background-color: black;
+}
+
+footer img {
+  width: 20px;
+}
+
+footer li {
+  padding: 10px 30px;
+}
+footer li:hover{
+  border-radius: 20px;
+  background-color: rgb(95, 95, 94);
+  transition: 0.3s;
+}
